@@ -11,7 +11,7 @@ assertEqual("Lighthouse Labs", "Bootcamp");
 assertEqual(1, 1);
 
 const head = function(){
-  return array[0] ?  array [0] : aundefined;
+  return array[0] ?  array [0] : undefined;
 };
 
 assertEqual(head([5,6,7]), 5);
