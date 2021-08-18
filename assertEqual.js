@@ -22,8 +22,8 @@ console.assert(sum(1, 20) === 3); // bad / incorrect assertion, and we see it fa
 // };
 
 // TEST CODE
-assertEqual("Lighthouse Labs", "Bootcamp");
-assertEqual(1, 1);
+// assertEqual("Lighthouse Labs", "Bootcamp");
+// assertEqual(1, 1);
 
 // Example 3
 

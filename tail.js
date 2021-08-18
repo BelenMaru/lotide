@@ -14,6 +14,9 @@ const array = function() {
   return(_.tail(arr));
 };
 
+// [1, 2, 3] === [1, 2, 3] // => false
+// [1, 2, 3] == [1, 2, 3] // => false
+
 // Test Case: Check the original array 
 const words = ["Yo Yo", "Lighthouse", "Labs"];
 tail(words); // no need to capture the return value since we are not checking it
