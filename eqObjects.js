@@ -6,12 +6,15 @@ const assertEqual = function(actual, expected) {
     console.log(`🛑  Assertion failed: ${actual} !== ${expected}`);
   }
   };
-assertEqual("Lighthouse Labs", "Bootcamp");
-assertEqual(1, 1);
 
 
+// Implement the function in order to pass the assertions for two objects are equal.
+// When they have the same number of keys
+// The value for each key in one object is the same as the value for that same key in the other object
+
+//eqArrays
 const eqArrays = function (array1, array2) {
-  if (array1.length !== array2.length) {
+  if (array1.length !== array2.length) {     // To compare the length
     return false;
   }
   for (let i = 0; i < array1.length ; i++) {
@@ -23,28 +26,39 @@ const eqArrays = function (array1, array2) {
 };
 
 
-
+// New function
 // Returns true if both objects have identical keys with identical values.
 // Otherwise you get back a big fat false!
 const eqObjects = function(object1, object2) {
-  let val = 0;
+  
+  let objectVal = 0;
   for (const key1 in object1) {
     for (const key2 in object2) {
       if ((key1 === key2) && (object1.key === object2.key )) {
-        return true;
+        objectVal = true;
       } else {
-        return false;
+        objectVal = false;
       }
     }
+    
   }
-  
+  return objectVal;
 };
 
 
+//test
+const ab = { a: "1", b: "2" };
+const ba = { b: "2", a: "1" };
+eqObjects(ab, ba); // => true
+assertEqual("Lighthouse Labs", "Bootcamp");
 
-const cd = { c: "1", d: ["2", 3] };
-const dc = { d: ["2", 3], c: "1" };
-eqObjects(cd, dc); // => true
+const abc = { a: "1", b: "2", c: "3" };
+eqObjects(ab, abc); // => false
+assertEqual(1, 1);
 
-const cd2 = { c: "1", d: ["2", 3, 4] };
-eqObjects(cd, cd2); // => false
+// output
+// 🛑  Assertion failed: Lighthouse Labs !== Bootcamp
+// ✅  Assertion passed: 1 === 1
+// belenmaru@Belens-MacBook-Pro lotide % node eqObjects.js
+// 🛑  Assertion failed: Lighthouse Labs !== Bootcamp
+// ✅  Assertion passed: 1 === 1
