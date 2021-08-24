@@ -23,8 +23,7 @@ const findKey = function(object, callback) {
 
 };
 
-const result = findKey(
-findKey({
+const result = findKey({
   "Blue Hill": { stars: 1 },
   "Akaleri":   { stars: 3 },
   "noma":      { stars: 2 },
@@ -33,15 +32,11 @@ findKey({
   "Akelarre":  { stars: 3 }
 }, x => x.stars === 2)
 
-);
+
 
 
 assertEqual(result,"noma"); //true
 assertEqual(result, 5); // false
-
-// output:
-// 🛑  Assertion failed: undefined !== noma
-// 🛑  Assertion failed: undefined !== 5
 
 
 

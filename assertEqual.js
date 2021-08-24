@@ -23,7 +23,7 @@ console.assert(sum(1, 20) === 3); // bad / incorrect assertion, and we see it fa
 
 // TEST CODE
 // assertEqual("Lighthouse Labs", "Bootcamp");
-// assertEqual(1, 1);
+// assertEqual(1, 1);.js
 
 // Example 3
 
@@ -34,5 +34,7 @@ const assertEqual = function(actual, expected) {
     console.log(`🛑  Assertion failed: ${actual} !== ${expected}`);
   }
   };
-assertEqual("Lighthouse Labs", "Bootcamp");
-assertEqual(1, 1);
+// assertEqual("Lighthouse Labs", "Bootcamp");
+// assertEqual(1, 1);
+
+module.exports = assertEqual;
